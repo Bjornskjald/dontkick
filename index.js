@@ -1,7 +1,7 @@
 const fb = require('facebook-chat-api')
 const log = require('npmlog')
 
-const config = require('./config.json')
+const config = require(process.env.NODE_ENV === 'docker' ? '/config/config.json' : './config.json')
 fb(config.login, { listenEvents: true }, (err, api) => {
   if (err) return log.error('dontkick', err)
   api.listen((err, message) => {
