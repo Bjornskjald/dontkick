@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bjornskjald <github@bjorn.ml>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "facebook-chat-api": "^1.5.1"
+  }
 }
